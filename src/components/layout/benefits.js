@@ -335,7 +335,7 @@ function Benefits() {
                     <div className="flex flex-row justify-between items-center mb-3 flex-nowrap">
                       <div className="flex flex-row items-center flex-nowrap">
                         <Image
-                          src={"/images/male-avatar.png"}
+                          src={process.env.NEXT_IMAGE_URL+"/male-avatar.png"}
                           width={25}
                           height={25}
                           alt="avatar"
@@ -352,7 +352,7 @@ function Benefits() {
                     <div className="flex flex-row justify-between items-center mb-5 flex-nowrap">
                       <div className="flex flex-row items-center flex-nowrap">
                         <Image
-                          src={"/images/female-avatar.png"}
+                          src={process.env.NEXT_IMAGE_URL+"/female-avatar.png"}
                           width={25}
                           height={25}
                           alt="avatar"

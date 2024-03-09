@@ -474,7 +474,7 @@ function Analytics() {
                 </div>
                 <div className="flex flex-row flex-center">
                   <Image
-                    src={"/images/female-avatar.png"}
+                    src={process.env.NEXT_IMAGE_URL+"/female-avatar.png"}
                     width={50}
                     height={50}
                     alt="avatar"
@@ -482,7 +482,7 @@ function Analytics() {
                     className="rounded-full border border-solid border-dark"
                   />
                   <Image
-                    src={"/images/male-avatar.png"}
+                    src={process.env.NEXT_IMAGE_URL+"/male-avatar.png"}
                     width={50}
                     height={50}
                     alt="avatar"

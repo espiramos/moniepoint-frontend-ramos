@@ -319,7 +319,7 @@ function Footer() {
                 alt="QR code"
                 width={100}
                 height={100}
-                src={"/images/qr.png"}
+                src={process.env.NEXT_IMAGE_URL+"/qr.png"}
               />
             </motion.div>
           </div>
