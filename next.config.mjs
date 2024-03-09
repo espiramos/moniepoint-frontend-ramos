@@ -6,7 +6,19 @@ const nextConfig = {
   output: 'export',
   distDir: 'dist',
   images: {
-    unoptimized: true
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'moniepoint-frontend-ramos.vercel.app',
+        pathname: '**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        pathname: '**',
+      },
+    ],
   },
   sassOptions: {
     includePaths: [join(__dirname, "styles")],

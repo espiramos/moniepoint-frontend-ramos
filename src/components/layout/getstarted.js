@@ -62,7 +62,7 @@ function Getstarted() {
               alt="brand icon"
               width={50}
               height={50}
-              src={"https://moniepoint-frontend-ramos.vercel.app/images/brand-icon-red.png"}
+              src={process.env.NEXT_PUBLIC_IMAGE_URL+"/brand-icon-red.png"}
             />
           </div>
         </motion.div>

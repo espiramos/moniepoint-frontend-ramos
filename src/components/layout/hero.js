@@ -126,6 +126,8 @@ function Hero() {
   };
 
   useEffect(() => {
+    console.log(process.env)
+    console.log(process.env.NEXT_PUBLIC_IMAGE_URL)
     if (isFirstIconInView) {
       setTimeout(() => {
         firstIconControls.start("visible");
@@ -286,7 +288,7 @@ function Hero() {
               className="w-full will-change h-fit rounded-xl"
             >
               <Image
-                src={"https://moniepoint-frontend-ramos.vercel.app/images/laptop-1.png"}
+                src={process.env.NEXT_PUBLIC_IMAGE_URL+"/laptop-1.png"}
                 alt="analytics dashboard mockup"
                 height={224}
                 width={300}
