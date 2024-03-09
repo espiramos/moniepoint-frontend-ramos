@@ -126,7 +126,7 @@ function LineChart() {
     }
 
     return () => clearTimeout(timeout);
-  }, [isInView]);
+  }, [isInView, controls]);
   useEffect(() => {
     let timeout;
     const show = () => {
@@ -140,7 +140,7 @@ function LineChart() {
     }
 
     return () => clearTimeout(timeout);
-  }, [isInView2]);
+  }, [isInView2, controls2]);
 
   return (
     <motion.div className="line-chart-container w-full h-full overflow-hidden relative">

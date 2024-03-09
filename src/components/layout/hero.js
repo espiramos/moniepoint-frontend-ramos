@@ -134,7 +134,7 @@ function Hero() {
     } else {
       firstIconControls.start("hidden");
     }
-  }, [isFirstIconInView]);
+  }, [isFirstIconInView, firstIconControls]);
   useEffect(() => {
     if (isSecondIconInView) {
       setTimeout(() => {
@@ -144,7 +144,7 @@ function Hero() {
     } else {
       secondIconControls.start("hidden");
     }
-  }, [isSecondIconInView]);
+  }, [isSecondIconInView, secondIconControls]);
   useEffect(() => {
     if (isThirdIconInView) {
       setTimeout(() => {
@@ -154,7 +154,7 @@ function Hero() {
     } else {
       thirdIconControls.start("hidden");
     }
-  }, [isThirdIconInView]);
+  }, [isThirdIconInView,thirdIconControls]);
   useEffect(() => {
     if (isHeroImageInView) {
       setTimeout(() => {
@@ -164,7 +164,7 @@ function Hero() {
     } else {
       heroImageControls.start("hidden");
     }
-  }, [isHeroImageInView]);
+  }, [isHeroImageInView, heroImageControls]);
 
   useEffect(() => {
     if (isFourthIconInView) {
@@ -175,7 +175,7 @@ function Hero() {
     } else {
       fourthIconControls.start("hidden");
     }
-  }, [isFourthIconInView]);
+  }, [isFourthIconInView, fourthIconControls]);
 
   return (
     <section

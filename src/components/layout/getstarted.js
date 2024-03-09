@@ -20,7 +20,7 @@ function Getstarted() {
     } else {
       sectionControl.start("hidden");
     }
-  }, [isSectionDivInView]);
+  }, [isSectionDivInView, sectionControl]);
   return (
     <section
       className={`${urbanist.className} getstarted-section w-full bg-white page-padding pb-12 min-h-screen flex flex-col`}

@@ -49,7 +49,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
     }
 
     return () => clearTimeout(timeout);
-  }, [isInView]);
+  }, [isInView, controls]);
 
   return (
     <motion.div

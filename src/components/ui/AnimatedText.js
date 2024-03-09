@@ -58,10 +58,12 @@ export const AnimatedText = ({
     }
 
     return () => clearTimeout(timeout);
-  }, [isInView]);
+  }, [isInView, controls, delay, repeatDelay]);
 
   return (
-    <Wrapper className={`${urbanist.className} h-fit will-change overflow-hidden ${className}`}>
+    <Wrapper
+      className={`${urbanist.className} h-fit will-change overflow-hidden ${className}`}
+    >
       <span className="sr-only">{textArray.join("")}</span>
       <motion.span
         ref={ref}

@@ -59,7 +59,7 @@ export const AnimatedTextAlt = ({
     }
 
     return () => clearTimeout(timeout);
-  }, [isInView]);
+  }, [isInView, controls, delay, repeatDelay]);
 
   return (
     <motion.div ref={ref}  className={`${urbanist.className} relative overflow-hidden w-fit h-fit`}>

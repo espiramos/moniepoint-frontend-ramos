@@ -58,7 +58,7 @@ function Benefits() {
     } else {
       leftControl.start("hidden");
     }
-  }, [isLeftDivInView]);
+  }, [isLeftDivInView, leftControl]);
   const rightControl = useAnimation();
   const rightDivRef = useRef(null);
   const isRightDivInView = useInView(rightDivRef, { amount: 0, once });
@@ -68,7 +68,7 @@ function Benefits() {
     } else {
       rightControl.start("hidden");
     }
-  }, [isRightDivInView]);
+  }, [isRightDivInView, rightControl]);
   const progressControl = useAnimation();
   const progressDivRef = useRef(null);
   const isProgressDivInView = useInView(progressDivRef, { amount: 0, once });
@@ -78,7 +78,7 @@ function Benefits() {
     } else {
       progressControl.start("hidden");
     }
-  }, [isProgressDivInView]);
+  }, [isProgressDivInView, progressControl]);
   return (
     <section
       className={`${urbanist.className} benefits-section w-full bg-white page-padding py-28 min-h-screen flex flex-col`}

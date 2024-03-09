@@ -214,7 +214,7 @@ function ComboChart({ reload }) {
       }
     }, 2000);
    
-  }, [reload]);
+  }, [reload, lineData]);
   return (
     <div
       className={`${urbanist.className} line-chart-container items-end flex flex-col justify-end`}

@@ -36,7 +36,7 @@ function Analytics() {
     } else {
       rightDarkCardControl.start("hidden");
     }
-  }, [isRightDarkCardInView]);
+  }, [isRightDarkCardInView, rightDarkCardControl]);
 
   const leftCardControl = useAnimation();
   const leftCardRef = useRef(null);
@@ -51,7 +51,7 @@ function Analytics() {
     } else {
       leftCardControl.start("hidden");
     }
-  }, [isLeftCardInView]);
+  }, [isLeftCardInView, leftCardControl]);
 
   useEffect(() => {
     if (isSecondDivInView) {
@@ -59,21 +59,21 @@ function Analytics() {
     } else {
       secondDivControl.start("hidden");
     }
-  }, [isSecondDivInView]);
+  }, [isSecondDivInView, secondDivControl]);
   useEffect(() => {
     if (isFirstDivInView) {
       firstDivControl.start("visible");
     } else {
       firstDivControl.start("hidden");
     }
-  }, [isFirstDivInView]);
+  }, [isFirstDivInView, firstDivControl]);
   useEffect(() => {
     if (isThirdDivInView) {
       thirdDivControl.start("visible");
     } else {
       thirdDivControl.start("hidden");
     }
-  }, [isThirdDivInView]);
+  }, [isThirdDivInView, thirdDivControl]);
 
   return (
     <section

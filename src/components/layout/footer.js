@@ -66,7 +66,7 @@ function Footer() {
     } else {
       firstControl.start("hidden");
     }
-  }, [isFirstDivInView]);
+  }, [isFirstDivInView, firstControl]);
 
 
   const controls = useAnimation();
@@ -89,7 +89,7 @@ function Footer() {
     }
 
     return () => clearTimeout(timeout);
-  }, [isInView]);
+  }, [isInView, controls]);
   return (
     <footer
       className={`${urbanist.className} getstarted-section w-full bg-dark pt-28 min-h-screen flex flex-col`}

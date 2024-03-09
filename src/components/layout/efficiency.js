@@ -40,7 +40,7 @@ function Efficiency() {
       transition: {
         duration: 1,
         delay: textAnimationsDuration + 0.5,
-        ease: "linear"
+        ease: "linear",
       },
     },
   };
@@ -55,7 +55,7 @@ function Efficiency() {
       transition: {
         duration: 1,
         delay: textAnimationsDuration + 0.3,
-        ease: "linear"
+        ease: "linear",
       },
     },
   };
@@ -68,7 +68,7 @@ function Efficiency() {
       transition: {
         duration: 1,
         delay: textAnimationsDuration + 0.3,
-        ease: "linear"
+        ease: "linear",
       },
     },
   };
@@ -78,48 +78,46 @@ function Efficiency() {
     } else {
       analyticsTextControls.start("hidden");
     }
-  }, [analyticsTextView]);
+  }, [analyticsTextView, analyticsTextControls]);
   useEffect(() => {
     if (isFirstIconInView) {
       firstIconControls.start("visible");
     } else {
       firstIconControls.start("hidden");
     }
-  }, [isFirstIconInView]);
+  }, [isFirstIconInView, firstIconControls]);
   useEffect(() => {
     if (isSecondIconInView) {
       secondIconControls.start("visible");
     } else {
       secondIconControls.start("hidden");
     }
-  }, [isSecondIconInView]);
+  }, [isSecondIconInView, secondIconControls]);
   useEffect(() => {
     if (analyticsInView) {
       analyticsControls.start("visible");
     } else {
       analyticsControls.start("hidden");
     }
-  }, [analyticsInView]);
+  }, [analyticsInView, analyticsControls]);
   useEffect(() => {
     if (ctaInView) {
       setTimeout(() => {
         ctaControls.start("visible");
       }, 2000);
-    
     } else {
       ctaControls.start("hidden");
     }
-  }, [ctaInView]);
+  }, [ctaInView, ctaControls]);
   useEffect(() => {
     if (textInView) {
       setTimeout(() => {
         textControls.start("visible");
       }, 2000);
-     
     } else {
       textControls.start("hidden");
     }
-  }, [textInView]);
+  }, [textInView, textControls]);
   return (
     <section
       className={`${urbanist.className} efficiency-section w-full bg-white page-padding py-28 min-h-screen flex flex-col`}
@@ -201,10 +199,10 @@ function Efficiency() {
             className="w-2/5 flex-nowrap py-6 overflow-clip px-4 rounded-full bg-positive"
           >
             <motion.div
-             ref={analyticsTextRef}
-             initial="hidden"
-             animate={analyticsTextControls}
-             aria-hidden
+              ref={analyticsTextRef}
+              initial="hidden"
+              animate={analyticsTextControls}
+              aria-hidden
               variants={{
                 hidden: {
                   x: "0",
@@ -214,7 +212,7 @@ function Efficiency() {
                   transition: {
                     duration: 120,
                     repeat: true,
-                    ease: "linear"
+                    ease: "linear",
                   },
                 },
               }}
@@ -250,7 +248,7 @@ function Efficiency() {
               Explore traffic sources, page behaviour, conversions and more to
               gain insight
               <br />
-              into your audience. With us, your business doesn't just adopt - it
+              into your audience. With us, your business doesn&apos;t just adopt - it
               evolves
             </p>
           </motion.div>
@@ -278,7 +276,7 @@ function Efficiency() {
                     duration: 1,
                   },
                 },
-              }} 
+              }}
               className="text-dark bg-secondary transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-medium rounded-xl text-sm px-8 py-3 text-center"
             >
               Request a demo
@@ -295,7 +293,7 @@ function Efficiency() {
                     duration: 1,
                   },
                 },
-              }} 
+              }}
               className="ml-3 text-white bg-danger transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-medium rounded-xl text-sm px-8 py-3 text-center"
             >
               Start for free

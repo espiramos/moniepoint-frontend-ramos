@@ -25,7 +25,7 @@ export function Counter({ from, to, unit, delay, duration = 0 }) {
     }
 
     return () => controls && controls.stop();
-  }, [isInView]);
+  }, [isInView, duration, from, to, unit,delay]);
 
   return <p className={urbanist.className}  ref={ref} />;
 }

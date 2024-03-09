@@ -41,7 +41,7 @@ export default function Features() {
     } else {
       devicesControl.start("hidden");
     }
-  }, [isDevicesDivInView]);
+  }, [isDevicesDivInView, devicesControl]);
 
   const ramosControl = useAnimation();
   const ramosDivRef = useRef(null);
@@ -66,7 +66,7 @@ export default function Features() {
     } else {
       ramosControl.start("hidden");
     }
-  }, [isRamosDivInView, animationsDone]);
+  }, [isRamosDivInView, animationsDone, ramosControl]);
 
   const featuresList = [
     { label: "Instant Insights" },
@@ -182,7 +182,7 @@ export default function Features() {
                 <figure
                   className={`${styles.ipad} -mr-64 flex flex-row justify-end`}
                 >
-                  <img src="/images/dashboard.png" className="w-full h-auto" />
+                  <img alt="desktop mockup" src="/images/dashboard.png" className="w-full h-auto" />
                 </figure>
               </motion.div>
               <motion.div
@@ -217,6 +217,7 @@ export default function Features() {
                         <img
                           src="/images/dashboard-mobile.png"
                           id="background"
+                          alt="mobile mockup"
                         />
                       </div>
 
