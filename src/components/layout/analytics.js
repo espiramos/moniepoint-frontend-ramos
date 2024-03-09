@@ -474,7 +474,7 @@ function Analytics() {
                 </div>
                 <div className="flex flex-row flex-center">
                   <Image
-                    src={process.env.NEXT_IMAGE_URL+"/female-avatar.png"}
+                    src={"https://moniepoint-frontend-ramos.vercel.app/images/female-avatar.png"}
                     width={50}
                     height={50}
                     alt="avatar"
@@ -482,7 +482,7 @@ function Analytics() {
                     className="rounded-full border border-solid border-dark"
                   />
                   <Image
-                    src={process.env.NEXT_IMAGE_URL+"/male-avatar.png"}
+                    src={"https://moniepoint-frontend-ramos.vercel.app/images/male-avatar.png"}
                     width={50}
                     height={50}
                     alt="avatar"

@@ -286,7 +286,7 @@ function Hero() {
               className="w-full will-change h-fit rounded-xl"
             >
               <Image
-                src={process.env.NEXT_IMAGE_URL+"/laptop-1.png"}
+                src={"https://moniepoint-frontend-ramos.vercel.app/images/laptop-1.png"}
                 alt="analytics dashboard mockup"
                 height={224}
                 width={300}
