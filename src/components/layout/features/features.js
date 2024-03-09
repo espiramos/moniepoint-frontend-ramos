@@ -24,7 +24,7 @@ export default function Features() {
     } else {
       featuresControl.start("hidden");
     }
-  }, [isFeatureDivInView]);
+  }, [isFeatureDivInView, featuresControl]);
 
   const devicesControl = useAnimation();
   const devicesDivRef = useRef(null);
