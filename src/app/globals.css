@@ -518,6 +518,10 @@ section {
   width: 100vw !important;
   scroll-snap-align: end !important;
 } */
+
+.ramos-container {
+  min-height: 50vh!important;
+}
 .ramos-text {
   background-color: #fe4a23;
   -webkit-background-clip: text;
@@ -525,4 +529,14 @@ section {
   z-index: 0;
   line-height: 0.73;
   text-align: left!important;
+}
+
+@media (max-width: 550px) {
+  .heading-largest {
+    text-align: center;
+    font-size: 8rem;
+  }
+  .ramos-container {
+    min-height: unset!important;
+  }
 }

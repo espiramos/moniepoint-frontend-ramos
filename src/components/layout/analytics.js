@@ -79,9 +79,9 @@ function Analytics() {
     <section
       className={`${urbanist.className} analytics-section page-padding py-28 min-h-screen flex flex-col`}
     >
-      <div className="analytics-content px-12 flex flex-col flex-nowrap w-full ">
-        <div className="w-full flex flex-row items-center justify-between">
-          <div className="flex flex-col">
+      <div className="analytics-content md:px-12 flex flex-col flex-nowrap w-full ">
+        <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-col w-full md:w-fit">
             <AnimatedTextAlt
               once
               text="Your key to strategic"
@@ -116,7 +116,7 @@ function Analytics() {
               },
             }}
             aria-hidden
-            className="flex flex-col justify-center pr-12 justify-end"
+            className="flex flex-col hidden md:block justify-center w-full md:w-fit md:pr-12 justify-end"
           >
             <AnimatedTextAlt
               once
@@ -155,7 +155,7 @@ function Analytics() {
             },
           }}
           aria-hidden
-          className="flex flex-row items-center w-full h-96 justify-between mt-16 flex-nowrap gap-x-3"
+          className="flex flex-col md:flex-row md:items-center w-full md:h-96 md:justify-between mt-16 md:flex-nowrap gap-y-3 md:gap-y-0 md:gap-x-3"
         >
           <motion.div
             ref={leftCardRef}
@@ -166,9 +166,9 @@ function Analytics() {
               hidden: {},
             }}
             aria-hidden
-            className="w-full h-full md:w-3/5 flex flex-row pl-8 pt-8 justify-between gap-x-2 bg-white rounded-3xl border-2 border-gray border-solid shadow-xl shadow-gray-200"
+            className="w-full h-full md:w-3/5 flex flex-col md:flex-row pl-8 pt-8 md:justify-between gap-y-2 md:gap-y-0 md:gap-x-2 bg-white rounded-3xl border-2 border-gray border-solid shadow-xl shadow-gray-200"
           >
-            <div className="w-1/2 overflow-hidden flex flex-col pb-8 justify-between">
+            <div className="md:w-1/2 w-full pr-8 md:pr-0 overflow-hidden flex flex-col pb-8 justify-between">
               <motion.span
                 variants={{
                   hidden: {
@@ -203,7 +203,7 @@ function Analytics() {
                     },
                   },
                 }}
-                className="flex flex-col"
+                className="flex mt-12 md:mt-0 flex-col"
               >
                 <h6 className="text-dark text-3xl font-medium">
                   Fast and easy access
@@ -219,7 +219,7 @@ function Analytics() {
                 </p>
               </motion.div>
             </div>
-            <div className="w-1/2 overflow-hidden border-t-2 border-l-2 border-gray border-solid rounded-tl-2xl shadow-sm flex flex-col justify-between py-4 px-4">
+            <div className="md:w-1/2 w-full overflow-hidden border-t-2 border-l-2 border-gray border-solid rounded-tl-2xl shadow-sm flex flex-col justify-between py-4 px-4">
               <motion.p
                 variants={{
                   hidden: {
@@ -454,7 +454,7 @@ function Analytics() {
                     },
                   },
                 }}
-                className="rounded-3xl w-40 h-40 py-5 analytics-widget-card-inner shadow-[-1px_0px_2px_0px_#413F3F] items-center justify-between"
+                className="rounded-3xl w-36 h-36 md:w-40 md:h-40 py-5 analytics-widget-card-inner shadow-[-1px_0px_2px_0px_#413F3F] items-center justify-between"
               >
                 <div className="text-positive">
                   <svg
@@ -505,7 +505,7 @@ function Analytics() {
                     },
                   },
                 }}
-                className="rounded-3xl w-40 h-40 py-5 analytics-widget-card-inner shadow-[-1px_0px_2px_0px_#413F3F] items-center justify-between"
+                className="rounded-3xl  w-36 h-36 md:w-40 md:h-40 py-5 analytics-widget-card-inner shadow-[-1px_0px_2px_0px_#413F3F] items-center justify-between"
               >
                 <div className="flex flex-col w-full h-full justify-between pl-8 pr-4">
                   <span className="text-sm text-white w-full">
@@ -566,13 +566,13 @@ function Analytics() {
               },
             },
           }}
-          className="w-full flex flex-row mt-16 flex-center"
+          className="w-full flex flex-col md:flex-row mt-16 flex-center"
         >
           <p className="text-dark text-2xl font-medium">
             Up to
             <span className="heading-text ml-1 text-dark font-medium">45%</span>
           </p>
-          <p className="text-dark text-lg font-medium ml-6">
+          <p className="text-dark text-lg font-medium mt-6 md:mt-0 md:ml-6">
             Increase your efficiency by up to 45%. Unique <br />
             algorithms provide insights from data, reduce time for analysis
             <br />

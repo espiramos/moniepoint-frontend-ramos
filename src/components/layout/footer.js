@@ -110,7 +110,7 @@ function Footer() {
           aria-hidden
           className=" w-full flex flex-col  justify-between"
         >
-          <div className="flex w-full flex-row items-center overflow-hidden h-fit justify-between gap-x-12 pb-12 border-b border-graydeep border-solid">
+          <div className="flex w-full flex-col md:flex-row md:items-center overflow-hidden h-fit justify-between gap-y-12 md:gap-y-0 md:gap-x-12 pb-8 md:pb-12 border-b border-graydeep border-solid">
             <motion.div
               variants={{
                 hidden: {
@@ -125,13 +125,13 @@ function Footer() {
                   },
                 },
               }}
-              className="footer-links flex flex-row items-center gap-x-6"
+              className="footer-links flex-wrap w-full md:w-fit flex flex-row items-center gap-x-6"
             >
               {links.map((navLink, index) => (
                 <a
                   href={navLink.to}
                   key={"nav-link-" + index}
-                  className="text-2xl transition ease-in-out duration-300 font-light text-grayalt rounded hover:opacity-50"
+                  className="text-2xl text-nowrap transition ease-in-out duration-300 font-light text-grayalt rounded hover:opacity-50"
                   aria-current="page"
                 >
                   {navLink.label}
@@ -155,12 +155,12 @@ function Footer() {
                 },
               }}
               href="mailto::hello@ramos.com"
-              className=" heading-text-2 text-white"
+              className="w-full md:w-fit text-4xl md:text-7xl text-white"
             >
               hello@ramos.com
             </motion.a>
           </div>
-          <div className="flex w-full overflow-hidden h-fit flex-row justify-between py-12">
+          <div className="flex w-full overflow-hidden h-fit flex-col md:flex-row justify-between py-12">
             <motion.div
               variants={{
                 hidden: {
@@ -176,7 +176,7 @@ function Footer() {
                   },
                 },
               }}
-              className="flex flex-row gap-x-6"
+              className="flex w-full md:w-fit flex-row gap-x-6"
             >
               {addresses.map((address, index) => (
                 <div key={"addresses-" + index} className="flex flex-col">
@@ -205,7 +205,7 @@ function Footer() {
                   },
                 },
               }}
-              className="flex flex-col items-end gap-y-6 "
+              className="flex w-full md:w-fit flex-col mt-8 md:mt-0 items-start md:items-end gap-y-6 "
             >
               <a
                 href="#"
@@ -227,11 +227,11 @@ function Footer() {
               </a>
             </motion.div>
           </div>
-          <div className="flex w-full flex-row justify-between mt-36">
-            <div className="flex flex-row flex-nowrap font-medium">
+          <div className="flex w-full flex-col md:flex-row items-center md:justify-between mb-12 mt-24">
+            <div className="flex order-2 md:order-1 w-full md:w-fit flex-row flex-nowrap font-medium">
               <div className="w-full flex flex-row flex-center">
                 <h1
-                  className={`h-fit overflow-hidden text-white text-9xl relative overflow-hidden w-fit h-fit`}
+                  className={`h-fit overflow-hidden text-white text-8xl md:text-9xl relative overflow-hidden w-fit h-fit`}
                 >
                   <span className="sr-only">ramos</span>
                   <motion.span
@@ -286,7 +286,7 @@ function Footer() {
                 Ⓡ
               </motion.span>
             </div>
-            <div className="flex flex-row items-center justify-center gap-x-12">
+            <div className="flex order-3 md:order-2 flex-row w-full mb-8 md:mb-0 md:w-fit items-center justify-center gap-x-12">
               <a
                 href="#"
                 className="text-graydeep transition ease-in-out duration-300 hover:text-white text-md mt-1"
@@ -313,7 +313,7 @@ function Footer() {
                   },
                 },
               }}
-              className="flex flex-row flex-center rounded-2xl bg-white text-dark px-4 py-4"
+              className="flex order-1 md:order-3 mb-12 md:mb-0 flex-row w-fit flex-center rounded-2xl bg-white text-dark px-4 py-4"
             >
               <Image
                 alt="QR code"

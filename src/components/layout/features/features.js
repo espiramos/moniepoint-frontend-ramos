@@ -19,6 +19,9 @@ export default function Features() {
     if (isFeatureDivInView) {
       setTimeout(() => {
         featuresControl.start("visible");
+        setTimeout(() => {
+          setAnimationsDone(true)
+        }, 3000);
       }, 2000);
     
     } else {
@@ -33,9 +36,7 @@ export default function Features() {
     if (isDevicesDivInView) {
       setTimeout(() => {
         devicesControl.start("visible");
-        setTimeout(() => {
-          setAnimationsDone(true)
-        }, 3000);
+        
       }, 2000);
       
     } else {
@@ -81,11 +82,11 @@ export default function Features() {
       <div className="bg-grid-cover w-full h-3/5 absolute top-0"></div>
       <div className="page-padding-left pt-28  flex flex-col">
         <div
-          className="analytics-content pl-12 z-10 flex flex-col flex-nowrap w-full"
+          className="analytics-content md:pl-12 pr-6 md:pr-0 z-10 flex flex-col flex-nowrap w-full"
           style={{ overflowX: "clip" }}
         >
-          <div className="w-full flex flex-row justify-between flex-nowrap">
-            <div className="flex w-1/3 flex-col">
+          <div className="w-full flex flex-col md:flex-row justify-between md:flex-nowrap">
+            <div className="flex w-full md:w-1/3 flex-col">
               <div className="flex flex-col">
                 <AnimatedTextAlt
                   once
@@ -110,7 +111,7 @@ export default function Features() {
                   hidden: {},
                 }}
                 aria-hidden
-                className="flex flex-col gap-y-6 mt-20"
+                className="flex w-full md:w-fit flex-col gap-y-6 mt-20"
               >
                 {featuresList.map((feature, index) => (
                   <motion.div
@@ -119,8 +120,10 @@ export default function Features() {
                       hidden: {
                         y: 400 - index * 50,
                         height: "50%",
+                        opacity: 0,
                       },
                       visible: {
+                        opacity: 1,
                         y: 0,
                         height: "100%",
                         transition: {
@@ -129,7 +132,7 @@ export default function Features() {
                         },
                       },
                     }}
-                    className="w-80 rounded-3xl border bg-white border-gray border-solid shadow-xl px-6 py-4 flex flex-row flex-nowrap justify-between items-center"
+                    className="w-full md:w-80 rounded-3xl border bg-white border-gray border-solid shadow-xl px-6 py-4 flex flex-row flex-nowrap justify-between items-center"
                   >
                     <h6 className="text-dark heading-text-6 font-medium">
                       {feature.label}
@@ -163,12 +166,12 @@ export default function Features() {
                 hidden: {},
               }}
               aria-hidden
-              className="flex w-2/3 pl-64 flex-row justify-end relative"
+              className="md:flex hidden w-2/3 pl-64 flex-row justify-end relative"
             >
               <motion.div
                 variants={{
                   hidden: {
-                    y: 500,
+                    y: 400,
                   },
                   visible: {
                     y: 0,
@@ -188,7 +191,7 @@ export default function Features() {
               <motion.div
                 variants={{
                   hidden: {
-                    y: 500,
+                    y: 400,
                   },
                   visible: {
                     y: 0,
@@ -237,13 +240,12 @@ export default function Features() {
             </motion.div>
           </div>
           <div
-            className="w-full flex flex-row  items-center -mt-28  page-padding-right pb-36"
-            style={{minHeight: '50vh'}}
+            className="w-full flex flex-row  items-center ramos-container mt-28 md:-mt-28  md:pr-6 pb-36"
           >
             <motion.div
               ref={ramosDivRef}
               animate={ramosControl}
-              className="text-nowrap text-left w-0 h-0 overflow-hidden ramos-text font-semibold heading-largest pr-12 relative"
+              className="text-nowrap text-left w-0 h-0 overflow-hidden ramos-text font-semibold heading-largest md:pr-12 relative"
             >
               Ramos
               {/* <div className="w-24 h-24 absolute top-0 bg-positive"></div> */}

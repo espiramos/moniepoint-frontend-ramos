@@ -122,21 +122,21 @@ function Efficiency() {
     <section
       className={`${urbanist.className} efficiency-section w-full bg-white page-padding py-28 min-h-screen flex flex-col`}
     >
-      <div className="efficiency-content py-28 px-12 flex flex-col flex-nowrap w-full">
+      <div className="efficiency-content py-28 md:px-12 flex flex-col flex-nowrap w-full">
         <div className="w-full flex flex-col">
-          <div className="w-full flex flex-row items-center">
+          <div className="w-full flex md:flex-row flex-col items-center md:gap-y-0 md:flex-wrap">
             <AnimatedText
               once
               text="Maximize"
               el="h1"
-              className="text-dark heading-text text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
+              className="text-dark text-nowrap text-7xl md:text-9xl text-center md:text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
             />
             <AnimatedText
               once
               text="efficiency"
               el="h1"
               delay={1}
-              className="text-grayalt heading-text text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
+              className="text-grayalt text-nowrap text-7xl md:text-9xl text-center md:text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
             />
           </div>
           <AnimatedText
@@ -144,11 +144,11 @@ function Efficiency() {
             text="with our intuitive"
             el="h1"
             delay={0.3}
-            className="text-dark heading-text text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
+            className="text-dark md:mt-0 text-7xl md:text-9xl text-center md:text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
           />
         </div>
         <div className="flex flex-row mt-12 w-full items-center border-b-2 border-solid border-secondary pb-16 justify-between">
-          <div className="flex flex-row h-fit items-center">
+          <div className="hidden md:flex flex-row h-fit items-center">
             <motion.div
               ref={firstIconRef}
               variants={firstIconAnimation}
@@ -196,7 +196,7 @@ function Efficiency() {
             initial="hidden"
             animate={analyticsControls}
             aria-hidden
-            className="w-2/5 flex-nowrap py-6 overflow-clip px-4 rounded-full bg-positive"
+            className="md:w-2/5 w-full flex-nowrap py-6 overflow-clip px-4 rounded-full bg-positive"
           >
             <motion.div
               ref={analyticsTextRef}
@@ -216,14 +216,14 @@ function Efficiency() {
                   },
                 },
               }}
-              className="text-dark inner-shadow heading-text text-nowrap font-medium flex-nowrap w-fit"
+              className="text-dark inner-shadow text-7xl md:text-9xl text-nowrap font-medium flex-nowrap w-fit"
             >
               analytics services analytics services analytics services analytics
               services analytics services analytics services
             </motion.div>
           </motion.div>
         </div>
-        <div className="flex flex-row mt-12 w-full items-center justify-between">
+        <div className="flex flex-col md:flex-row mt-12 w-full items-center justify-between">
           <motion.div
             ref={textRef}
             variants={{
@@ -242,13 +242,18 @@ function Efficiency() {
             initial="hidden"
             animate={textControls}
             aria-hidden
-            className="flex flex-row items-center"
+            className="flex w-full md:w-fit flex-row items-center"
           >
-            <p className="text-dark text-sm font-medium">
+            <p className="md:block hidden text-dark text-sm font-medium">
               Explore traffic sources, page behaviour, conversions and more to
               gain insight
               <br />
               into your audience. With us, your business doesn&apos;t just adopt - it
+              evolves
+            </p>
+            <p className="md:hidden text-dark text-sm font-medium">
+              Explore traffic sources, page behaviour, conversions and more to
+              gain insight into your audience. With us, your business doesn&apos;t just adopt - it
               evolves
             </p>
           </motion.div>
@@ -262,7 +267,7 @@ function Efficiency() {
             initial="hidden"
             animate={ctaControls}
             aria-hidden
-            className="flex-row items-center justify-end flex-nowrap "
+            className="flex-row flex  gap-x-4 w-full mt-6 md:mt-0 md:w-fit items-center justify-center md:justify-end flex-nowrap "
           >
             <motion.button
               type="button"
@@ -277,7 +282,7 @@ function Efficiency() {
                   },
                 },
               }}
-              className="text-dark bg-secondary transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-medium rounded-xl text-sm px-8 py-3 text-center"
+              className="text-dark w-1/2 md:w-fit bg-secondary transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-medium rounded-xl text-sm px-8 py-3 text-center"
             >
               Request a demo
             </motion.button>
@@ -294,7 +299,7 @@ function Efficiency() {
                   },
                 },
               }}
-              className="ml-3 text-white bg-danger transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-medium rounded-xl text-sm px-8 py-3 text-center"
+              className=" w-1/2 md:w-fit text-white bg-danger transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-medium rounded-xl text-sm px-8 py-3 text-center"
             >
               Start for free
             </motion.button>

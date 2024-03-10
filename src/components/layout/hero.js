@@ -13,21 +13,27 @@ function Hero() {
   const firstIconControls = useAnimation();
   const secondIconControls = useAnimation();
   const thirdIconControls = useAnimation();
+  const thirdIconControls2 = useAnimation();
   const fourthIconControls = useAnimation();
   const heroImageControls = useAnimation();
+  const heroImageControls2 = useAnimation();
   const once = true;
   const firstIconRef = useRef(null);
   const secondIconRef = useRef(null);
   const thirdIconRef = useRef(null);
+  const thirdIconRef2 = useRef(null);
   const fourthIconRef = useRef(null);
   const fourthIconChildOneRef = useRef(null);
   const fourthIconChildTwoRef = useRef(null);
   const heroImageRef = useRef(null);
+  const heroImageRef2 = useRef(null);
   const isFirstIconInView = useInView(firstIconRef, { amount: 0.5, once });
   const isSecondIconInView = useInView(secondIconRef, { amount: 0.5, once });
   const isThirdIconInView = useInView(thirdIconRef, { amount: 0.5, once });
+  const isThirdIconInView2 = useInView(thirdIconRef2, { amount: 0.5, once });
   const isFourthIconInView = useInView(fourthIconRef, { amount: 0.5, once });
   const isHeroImageInView = useInView(heroImageRef, { amount: 0.5, once });
+  const isHeroImageInView2 = useInView(heroImageRef2, { amount: 0.5, once });
 
   const textAnimationsDuration = 1.5;
 
@@ -126,13 +132,10 @@ function Hero() {
   };
 
   useEffect(() => {
-    console.log(process.env)
-    console.log(process.env.NEXT_PUBLIC_IMAGE_URL)
     if (isFirstIconInView) {
       setTimeout(() => {
         firstIconControls.start("visible");
-      }, (textAnimationsDuration + 0.3) * 1000 );
-       
+      }, (textAnimationsDuration + 0.3) * 1000);
     } else {
       firstIconControls.start("hidden");
     }
@@ -140,9 +143,8 @@ function Hero() {
   useEffect(() => {
     if (isSecondIconInView) {
       setTimeout(() => {
-        
         secondIconControls.start("visible");
-      }, (textAnimationsDuration + 0.5) * 1000 );
+      }, (textAnimationsDuration + 0.5) * 1000);
     } else {
       secondIconControls.start("hidden");
     }
@@ -150,30 +152,45 @@ function Hero() {
   useEffect(() => {
     if (isThirdIconInView) {
       setTimeout(() => {
-        
         thirdIconControls.start("visible");
-      }, (textAnimationsDuration) * 1000 );
+      }, textAnimationsDuration * 1000);
     } else {
       thirdIconControls.start("hidden");
     }
-  }, [isThirdIconInView,thirdIconControls]);
+  }, [isThirdIconInView, thirdIconControls]);
+  useEffect(() => {
+    if (isThirdIconInView2) {
+      setTimeout(() => {
+        thirdIconControls2.start("visible");
+      }, textAnimationsDuration * 1000);
+    } else {
+      thirdIconControls2.start("hidden");
+    }
+  }, [isThirdIconInView2, thirdIconControls2]);
   useEffect(() => {
     if (isHeroImageInView) {
       setTimeout(() => {
-        
         heroImageControls.start("visible");
-      }, (textAnimationsDuration + 0.3) * 1000 );
+      }, (textAnimationsDuration + 0.3) * 1000);
     } else {
       heroImageControls.start("hidden");
     }
   }, [isHeroImageInView, heroImageControls]);
+  useEffect(() => {
+    if (isHeroImageInView2) {
+      setTimeout(() => {
+        heroImageControls2.start("visible");
+      }, (textAnimationsDuration + 0.3) * 1000);
+    } else {
+      heroImageControls2.start("hidden");
+    }
+  }, [isHeroImageInView2, heroImageControls2]);
 
   useEffect(() => {
     if (isFourthIconInView) {
       setTimeout(() => {
-        
         fourthIconControls.start("visible");
-      }, (textAnimationsDuration + 0.7) * 1000 );
+      }, (textAnimationsDuration + 0.7) * 1000);
     } else {
       fourthIconControls.start("hidden");
     }
@@ -183,10 +200,10 @@ function Hero() {
     <section
       className={`${urbanist.className}  w-full page-padding min-h-screen flex flex-col justify-center items-center`}
     >
-      <div className="hero-content pl-20 py-44 pr-12 flex flex-col w-full flex-nowrap">
-        <div className="flex flex-row flex-nowrap justify-end w-full">
+      <div className="hidden md:flex hero-content md:pl-20 py-44 md:pr-12 flex-col w-full flex-nowrap">
+        <div className="flex flex-col md:flex-row md:flex-nowrap md:justify-end w-full">
           <div className="flex flex-col">
-            <div className="flex flex-row ml-16 w-full">
+            <div className="flex flex-row md:ml-16 w-full">
               <div className="flex flex-row h-fit items-center">
                 <motion.div
                   ref={firstIconRef}
@@ -194,13 +211,13 @@ function Hero() {
                   initial="hidden"
                   animate={firstIconControls}
                   aria-hidden
-                  className="will-change secondary-circle-icon shadow circle-icon p-10 rounded-full flex flex-row justify-center items-center text-danger"
+                  className="will-change secondary-circle-icon shadow circle-icon p-4 md:p-10 rounded-full flex flex-row justify-center items-center text-danger"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    className="w-8 h-8"
+                    className="w-6 h-6 md:w-8 md:h-8"
                   >
                     <path
                       fillRule="evenodd"
@@ -215,10 +232,10 @@ function Hero() {
                   initial="hidden"
                   animate={secondIconControls}
                   aria-hidden
-                  className="will-change danger-circle-icon shadow-md -ml-8 circle-icon p-10 rounded-full flex flex-row justify-center items-center text-white bg-danger"
+                  className="will-change danger-circle-icon shadow-md -ml-4 md:-ml-8 circle-icon p-4 md:p-10 rounded-full flex flex-row justify-center items-center text-white bg-danger"
                 >
                   <svg
-                    className="w-8 h-8"
+                    className="w-6 h-6 md:w-8 md:h-8"
                     viewBox="0 0 40 22"
                     fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg"
@@ -252,7 +269,7 @@ function Hero() {
                 once
                 text="Analytics"
                 el="h1"
-                className="text-dark will-change heading-text font-medium ml-6 relative relative overflow-hidden w-fit h-fit"
+                className="text-dark will-change text-6xl md:text-9xl font-medium ml-6 relative relative overflow-hidden w-fit h-fit"
               />
             </div>
             <div className="mt-6 flex -ml-8 flex-row justify-start">
@@ -260,21 +277,21 @@ function Hero() {
                 once
                 text="that"
                 el="h1"
-                className="text-dark will-change text-left heading-text font-medium"
+                className="text-dark will-change text-left  text-6xl md:text-9xl font-medium"
               />
               <AnimatedText
                 once
                 text="helps"
                 el="h1"
                 delay={0.5}
-                className="text-grayalt will-change text-left heading-text font-medium"
+                className="text-grayalt will-change text-left  text-6xl md:text-9xl font-medium"
               />
               <AnimatedText
                 once
                 text="you"
                 el="h1"
                 delay={1}
-                className="text-dark will-change text-left heading-text font-medium"
+                className="text-dark will-change text-left  text-6xl md:text-9xl font-medium"
               />
             </div>
           </div>
@@ -288,7 +305,7 @@ function Hero() {
               className="w-full will-change h-fit rounded-xl"
             >
               <Image
-                src={process.env.NEXT_PUBLIC_IMAGE_URL+"/laptop-1.png"}
+                src={process.env.NEXT_PUBLIC_IMAGE_URL + "/laptop-1.png"}
                 alt="analytics dashboard mockup"
                 height={224}
                 width={300}
@@ -322,38 +339,38 @@ function Hero() {
           </div>
         </div>
 
-        <div className="flex-row w-full flex-nowrap flex items-center mt-9 justify-end">
+        <div className="flex-row w-full flex-wrap md:flex-nowrap flex items-center md:mt-9 md:justify-end">
           <AnimatedText
             once
             text="shape"
             el="h1"
             noSpace={true}
-            className="text-dark will-change heading-text w-fit font-medium"
+            className="text-dark will-change text-nowrap text-6xl md:text-9xl w-fit font-medium"
           />
           <motion.div
             ref={fourthIconRef}
             variants={fourthIconAnimation}
             initial="hidden"
             animate={fourthIconControls}
-            className="mx-4 shadow-md circle-icon will-change w-fit p-8 rounded-full flex flex-row justify-center items-center text-dark bg-positive"
+            className="mx-4 shadow-md circle-icon will-change w-fit hidden md:block p-4 md:p-10 rounded-full flex flex-row justify-center items-center text-dark bg-positive"
           >
-            <div className="w-12 h-12 flex flex-center flex-row gap-x-1.5">
+            <div className="w-6 h-6 md:w-12 md:h-12 flex flex-center flex-row gap-x-1.5">
               <div className="h-full flex flex-col justify-end">
-                <div className="bg-dark rounded-lg h-7 w-1.5"></div>
+                <div className="bg-dark rounded-lg h-3 md:h-7 w-1.5"></div>
               </div>
               <motion.div
                 variants={fourthIconChildOneAnimation}
                 ref={fourthIconChildOneRef}
                 className="h-full flex flex-col items-center justify-center"
               >
-                <div className="bg-dark rounded-lg h-10 w-1.5"></div>
+                <div className="bg-dark rounded-lg h-6 md:h-10 w-1.5"></div>
               </motion.div>
               <motion.div
                 variants={fourthIconChildTwoAnimation}
                 ref={fourthIconChildTwoRef}
                 className="h-full flex flex-col items-center justify-center"
               >
-                <div className="bg-dark rounded-lg h-12 w-1.5"></div>
+                <div className="bg-dark rounded-lg h-8 md:h-12 w-1.5"></div>
               </motion.div>
             </div>
           </motion.div>
@@ -361,9 +378,106 @@ function Hero() {
             once
             text="the future"
             el="h1"
-            className="text-dark will-change heading-text w-fit font-medium"
+            className="text-dark will-change text-nowrap  text-6xl md:text-9xl w-fit font-medium"
             delay={0.5}
           />
+        </div>
+      </div>
+      <div className="md:hidden hero-content flex flex-col w-full flex-nowrap">
+        <div className="flex flex-col w-full">
+          <div className="flex flex-row justify-center gap-y-4 items-center flex-wrap w-full">
+            <AnimatedText
+              once
+              text="Analytics"
+              el="h1"
+              className="text-nowrap  w-full text-dark will-change text-center  text-7xl font-medium relative relative overflow-hidden w-fit h-fit"
+            />
+            <AnimatedText
+              once
+              text="that"
+              el="h1"
+              delay={0.3}
+              className="text-nowrap text-dark will-change text-center  text-7xl font-medium relative relative overflow-hidden w-fit h-fit"
+            />
+            <AnimatedText
+              once
+              text="helps"
+              el="h1"
+              delay={0.6}
+              className="text-nowrap text-grayalt will-change text-center  text-7xl font-medium relative relative overflow-hidden w-fit h-fit"
+            />
+            <AnimatedText
+              once
+              text="you"
+              el="h1"
+              delay={0.9}
+              className="text-nowrap text-dark will-change text-center  text-7xl font-medium relative relative overflow-hidden w-fit h-fit"
+            />
+            <AnimatedText
+              once
+              text="shape"
+              el="h1"
+              delay={1.2}
+              className="text-nowrap text-dark will-change text-center  text-7xl font-medium relative relative overflow-hidden w-fit h-fit"
+            />
+            <AnimatedText
+              once
+              text="the"
+              el="h1"
+              delay={1.5}
+              className="text-nowrap text-dark will-change text-center  text-7xl font-medium relative relative overflow-hidden w-fit h-fit"
+            />
+            <AnimatedText
+              once
+              text="future"
+              el="h1"
+              delay={1.8}
+              className="text-nowrap text-dark will-change text-center  text-7xl font-medium relative relative overflow-hidden w-fit h-fit"
+            />
+          </div>
+          <div className="w-full pl-3 mt-12">
+            <div className="hero-image-and-icon relative flex-auto w-full  h-fit rounded-xl">
+              <motion.div
+                ref={heroImageRef2}
+                variants={heroImageAnimation}
+                initial="hidden"
+                animate={heroImageControls2}
+                className="w-full will-change h-fit rounded-xl"
+              >
+                <Image
+                  src={process.env.NEXT_PUBLIC_IMAGE_URL + "/laptop-1.png"}
+                  alt="analytics dashboard mockup"
+                  height={224}
+                  width={300}
+                  sizes="(min-width: 768px) 20rem, 14rem"
+                  className="rounded-2xl w-full shadow h-full"
+                  quality={100}
+                  priority={true}
+                />
+              </motion.div>
+
+              <motion.div
+                ref={thirdIconRef2}
+                variants={thirdIconAnimation}
+                initial="hidden"
+                animate={thirdIconControls2}
+                className="danger-circle-icon will-change absolute shadow-lg -top-4 -left-4 circle-icon p-3 rounded-full flex flex-row justify-center items-center text-white bg-danger"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

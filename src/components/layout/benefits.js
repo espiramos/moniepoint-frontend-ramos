@@ -83,14 +83,14 @@ function Benefits() {
     <section
       className={`${urbanist.className} benefits-section w-full bg-white page-padding py-28 min-h-screen flex flex-col`}
     >
-      <div className="benefits-content px-12 py-28 flex flex-col flex-nowrap w-full">
+      <div className="benefits-content md:px-12 py-28 flex flex-col flex-nowrap w-full">
         <div className="flex flex-col">
           <div className="w-full flex flex-row items-center">
             <AnimatedText
               once
               text="We give you full"
               el="h1"
-              className="text-dark heading-text text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
+              className="text-dark text-6xl md:text-9xl text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
             />
           </div>
           <div className="w-full flex flex-row items-center flex-wrap">
@@ -98,32 +98,32 @@ function Benefits() {
               once
               text="control"
               el="h1"
-              className="text-grayalt heading-text text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
+              className="text-grayalt text-6xl md:text-9xl text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
             />
             <AnimatedText
               once
               text="over"
               el="h1"
               delay={0.5}
-              className="text-dark heading-text text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
+              className="text-dark text-6xl md:text-9xl text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
             />
             <AnimatedText
               once
               text="your"
               delay={1}
               el="h1"
-              className="text-dark heading-text text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
+              className="text-dark text-6xl md:text-9xl text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
             />
             <AnimatedText
               once
               text="data"
               delay={1.5}
               el="h1"
-              className="text-dark heading-text text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
+              className="text-dark text-6xl md:text-9xl text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
             />
           </div>
         </div>
-        <div className="w-full justify-between items-center mt-20 flex flex-row gap-x-3">
+        <div className="w-full justify-between items-center mt-20 flex flex-col gap-y-3 md:gap-y-0 md:flex-row md:gap-x-3">
           <motion.div
             ref={leftDivRef}
             animate={leftControl}
@@ -143,12 +143,12 @@ function Benefits() {
               },
             }}
             aria-hidden
-            className="w-1/2 benefits-card border shadow-xl overflow-hidden border-gray border-solid rounded-3xl relative"
+            className="w-full md:w-1/2 benefits-card border shadow-xl overflow-hidden border-gray border-solid rounded-3xl relative"
           >
             <div className="w-full absolute top-0 grid-lines h-full"></div>
             <div className="bg-grid-cover-invert w-full h-1/2 absolute bottom-0"></div>
-            <div className="py-8 px-12 flex w-full flex-col h-full">
-              <div className="flex flex-row flex-center px-6">
+            <div className="py-8 px-4 md:px-12 flex w-full flex-col h-full">
+              <div className="flex flex-row flex-center md:px-6">
                 {/* inner cards */}
                 <motion.div
                   variants={{
@@ -165,7 +165,7 @@ function Benefits() {
                       },
                     },
                   }}
-                  className="bg-white border border-gray border-solid shadow-lg z-10 rounded-2xl w-1/2 h-64 py-6 px-12 flex flex-col flex-center"
+                  className="bg-white border border-gray border-solid shadow-lg z-10 rounded-2xl w-1/2 h-64 py-3 px-6 md:py-6 md:px-12 flex flex-col flex-center"
                 >
                   <span className="text-sm w-full text-dark font-semibold text-center mb-4">
                     Conversion rate
@@ -238,7 +238,7 @@ function Benefits() {
                       },
                     },
                   }}
-                  className="bg-white border -ml-6 -mb-16 border-gray border-solid shadow-lg z-10 rounded-2xl w-1/2 h-64 px-4 pt-6 flex flex-col flex-center"
+                  className="bg-white border -ml-6 -mb-16 border-gray border-solid shadow-lg z-10 rounded-2xl w-1/2 h-64 px-3 pt-4 md:px-4 md:pt-6 flex flex-col flex-center"
                 >
                   <span className="text-sm w-full text-graydeep font-medium text-left mb-2">
                     Sales revenue
@@ -384,11 +384,16 @@ function Benefits() {
                 </h6>
               </div>
               <div className="flex flex-row flex-center">
-                <p className="text-dark z-10 text-center text-lg mt-3">
+                <p className="hidden md:block text-dark z-10 text-center text-lg mt-3">
                   Analytics helps optimize service processes by
                   <br />
                   providing information on how to improve interactions
                   <br />
+                  with customers and increase their satisfaction.
+                </p>
+                <p className="md:hidden text-dark z-10 text-center text-lg mt-3">
+                  Analytics helps optimize service processes by
+                  providing information on how to improve interactions
                   with customers and increase their satisfaction.
                 </p>
               </div>
@@ -415,11 +420,11 @@ function Benefits() {
               },
             }}
             aria-hidden
-            className="w-1/2 benefits-card border shadow-xl overflow-hidden border-gray border-solid rounded-3xl relative"
+            className="w-full md:w-1/2 benefits-card border shadow-xl overflow-hidden border-gray border-solid rounded-3xl relative"
           >
             <div className="w-full absolute top-0 grid-lines h-full"></div>
             <div className="bg-grid-cover-invert w-full h-1/2 absolute bottom-0"></div>
-            <div className="py-8 px-12 flex w-full flex-col h-full">
+            <div className="py-8 py-8 px-4 md:px-12 flex w-full flex-col h-full">
               <div className="flex flex-row h-64 flex-center mt-12">
                 {/* inner cards */}
                 <CardStackDemo />
@@ -431,11 +436,16 @@ function Benefits() {
                 </h6>
               </div>
               <div className="flex flex-row flex-center">
-                <p className="text-dark z-10 text-center text-lg mt-4">
+                <p className="hidden md:block text-dark z-10 text-center text-lg mt-4">
                   Analytics platforms allow businesses to track
                   <br />
                   KPIs, an important tool for measuring success
                   <br />
+                  and achieving goals.
+                </p>
+                <p className="md:hidden text-dark z-10 text-center text-lg mt-4">
+                  Analytics platforms allow businesses to track
+                  KPIs, an important tool for measuring success
                   and achieving goals.
                 </p>
               </div>

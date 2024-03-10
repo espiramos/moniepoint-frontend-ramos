@@ -23,7 +23,7 @@ function Getstarted() {
   }, [isSectionDivInView, sectionControl]);
   return (
     <section
-      className={`${urbanist.className} getstarted-section w-full bg-white page-padding pb-12 min-h-screen flex flex-col`}
+      className={`${urbanist.className} getstarted-section w-full bg-white page-padding md:pb-12 min-h-screen flex flex-col`}
     >
       <motion.div
         ref={sectionDivRef}
@@ -38,7 +38,7 @@ function Getstarted() {
           },
         }}
         aria-hidden
-        className="getstarted-content px-12 pb-12 flex flex-col flex-nowrap w-full"
+        className="getstarted-content md:px-12 md:pb-12 flex flex-col flex-nowrap w-full"
       >
         <motion.div
           variants={{
@@ -72,7 +72,7 @@ function Getstarted() {
             text="Get"
             el="h1"
             delay={1}
-            className="text-dark heading-text text-center font-medium mb-8 relative overflow-hidden w-fit h-fit"
+            className="text-dark text-7xl md:text-9xl text-center font-medium md:mb-8 relative overflow-hidden w-fit h-fit"
           />
           <AnimatedText
             once
@@ -80,7 +80,7 @@ function Getstarted() {
             el="h1"
             delay={1.5}
             noSpace={true}
-            className="text-dark heading-text text-center font-medium mb-8 relative overflow-hidden w-fit h-fit"
+            className="text-dark text-7xl md:text-9xl text-center font-medium md:mb-8 relative overflow-hidden w-fit h-fit"
           />
         </div>
         <motion.h6
@@ -98,10 +98,30 @@ function Getstarted() {
               },
             },
           }}
-          className="text-graydeep z-10 text-2xl text-center mb-12"
+          className="hidden md:block text-graydeep z-10 text-2xl text-center mb-12"
         >
           Turn information into advantage! Start using
           <br />
+          Ramos today. Sign up for a free trial
+        </motion.h6>
+        <motion.h6
+          variants={{
+            hidden: {
+              opacity: 0,
+              y: 200,
+            },
+            visible: {
+              opacity: 1,
+              y: 0,
+              transition: {
+                duration: 1,
+                delay: 1,
+              },
+            },
+          }}
+          className="md:hidden text-graydeep -mt-12 z-10 text-2xl text-center mb-12"
+        >
+          Turn information into advantage! Start using
           Ramos today. Sign up for a free trial
         </motion.h6>
         <motion.div
@@ -122,13 +142,13 @@ function Getstarted() {
         >
           <button
             type="button"
-            className="text-dark bg-secondary transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-semibold rounded-xl text-md px-8 py-4 text-center"
+            className="text-dark bg-secondary w-1/2 md:w-fit transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-semibold rounded-xl text-md px-8 py-4 text-center"
           >
             Request a demo
           </button>
           <button
             type="button"
-            className="text-white bg-danger transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-medium rounded-xl text-md px-8 py-4 text-center"
+            className="text-white bg-danger w-1/2 md:w-fit  transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-medium rounded-xl text-md px-8 py-4 text-center"
           >
             Start for free
           </button>

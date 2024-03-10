@@ -64,13 +64,13 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
           },
         },
       }}
-      className={`${urbanist.className} relative bottom-hidden will-change h-40 w-40 md:h-40 md:w-96`}
+      className={`${urbanist.className} relative z-30 bottom-hidden will-change h-48 w-full md:h-40 md:w-96`}
     >
       {cards.map((card, index) =>
         card.empty ? (
           <motion.div
             key={card.id}
-            className="absolute bg-white h-48 w-40 md:h-48 will-change md:w-96 rounded-2xl px-4 py-2 shadow-xl border border-neutral-200 shadow-black/[0.1] flex flex-col justify-between"
+            className="absolute bg-white h-48 w-full md:h-48 will-change md:w-96 rounded-2xl px-4 py-2 shadow-xl border border-neutral-200 shadow-black/[0.1] flex flex-col justify-between"
             style={{
               transformOrigin: "top center",
             }}
@@ -95,7 +95,7 @@ export const CardStack = ({ items, offset, scaleFactor }) => {
         ) : (
           <motion.div
             key={card.id}
-            className="absolute bg-white h-48 w-40 md:h-48 will-change md:w-96 rounded-2xl px-4 py-2.5 shadow-xl border border-neutral-200 shadow-black/[0.1] flex flex-col justify-between"
+            className="absolute bg-white h-48 w-full md:h-48 will-change md:w-96 rounded-2xl px-4 py-2.5 shadow-xl border border-neutral-200 shadow-black/[0.1] flex flex-col justify-between"
             style={{
               transformOrigin: "top center",
             }}
