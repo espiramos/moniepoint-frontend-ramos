@@ -77,7 +77,7 @@ function Analytics() {
 
   return (
     <section
-      className={`${urbanist.className} analytics-section page-padding py-28 min-h-screen flex flex-col`}
+      className={`${urbanist.className} analytics-section  overflow-hidden page-padding py-28 min-h-screen flex flex-col`}
     >
       <div className="analytics-content md:px-12 flex flex-col flex-nowrap w-full ">
         <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between">

@@ -81,7 +81,7 @@ function Benefits() {
   }, [isProgressDivInView, progressControl]);
   return (
     <section
-      className={`${urbanist.className} benefits-section w-full bg-white page-padding py-28 min-h-screen flex flex-col`}
+      className={`${urbanist.className} benefits-section  overflow-hidden w-full bg-white page-padding py-28 min-h-screen flex flex-col`}
     >
       <div className="benefits-content md:px-12 py-28 flex flex-col flex-nowrap w-full">
         <div className="flex flex-col">
@@ -165,7 +165,7 @@ function Benefits() {
                       },
                     },
                   }}
-                  className="bg-white border border-gray border-solid shadow-lg z-10 rounded-2xl w-1/2 h-64 py-3 px-6 md:py-6 md:px-12 flex flex-col flex-center"
+                  className="bg-white border border-gray border-solid shadow-lg z-10 rounded-2xl w-3/5 md:w-1/2  h-60 md:h-64 py-3 px-3 md:py-6 md:px-12 flex flex-col flex-center"
                 >
                   <span className="text-sm w-full text-dark font-semibold text-center mb-4">
                     Conversion rate
@@ -186,8 +186,8 @@ function Benefits() {
                       }}
                       className="absolute top-0 w-full  rounded-2xl h-full bg-positive"
                     ></motion.div>
-                    <div className="w-full h-full py-1 px-6 relative">
-                      <span className="widget-text-main font-medium">
+                    <div className="w-full h-full py-3 px-6 relative">
+                      <span className="text-5xl font-medium">
                         2,3<span className="text-3xl font-medium">%</span>
                       </span>
                       <motion.div
@@ -238,12 +238,12 @@ function Benefits() {
                       },
                     },
                   }}
-                  className="bg-white border -ml-6 -mb-16 border-gray border-solid shadow-lg z-10 rounded-2xl w-1/2 h-64 px-3 pt-4 md:px-4 md:pt-6 flex flex-col flex-center"
+                  className="bg-white border -ml-16 md:-ml-6 -mb-16 border-gray border-solid shadow-lg z-10 rounded-2xl w-3/5 md:w-1/2 h-60 md:h-64 px-3 py-4 md:px-4 md:pt-6 flex flex-col flex-center"
                 >
                   <span className="text-sm w-full text-graydeep font-medium text-left mb-2">
                     Sales revenue
                   </span>
-                  <span className="text-sm w-full text-xl flex flex-row items-center text-dark font-medium text-left mb-5">
+                  <span className="text-sm w-full text-xl flex flex-row items-center text-dark font-medium text-left mb-2 md:mb-5">
                     $
                     <span className="text-2xl ml-1">
                       <Counter
@@ -349,7 +349,7 @@ function Benefits() {
                         1,200 $
                       </span>
                     </div>
-                    <div className="flex flex-row justify-between items-center mb-5 flex-nowrap">
+                    <div className="flex flex-row justify-between items-center mb-3 md:mb-5 flex-nowrap">
                       <div className="flex flex-row items-center flex-nowrap">
                         <Image
                           src={process.env.NEXT_PUBLIC_IMAGE_URL+"/female-avatar.png"}
@@ -368,7 +368,7 @@ function Benefits() {
                     </div>
                   </div>
 
-                  <div className="flex flex-row justify-between w-full mt-4 items-center mb-4 flex-nowrap">
+                  <div className="flex flex-row justify-between w-full mt-4 items-center md:mb-4 flex-nowrap">
                     <span className="text-xs text-graydeep font-medium text-left">
                       Engagement rate
                     </span>

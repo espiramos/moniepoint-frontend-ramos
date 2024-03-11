@@ -123,7 +123,7 @@ body {
   z-index: 2;
 }
 .will-change {
-  will-change: transform!important;
+  will-change: transform !important;
 }
 .analytics-widget-card-inner {
   display: flex;
@@ -520,7 +520,7 @@ section {
 } */
 
 .ramos-container {
-  min-height: 50vh!important;
+  min-height: 50vh !important;
 }
 .ramos-text {
   background-color: #fe4a23;
@@ -528,15 +528,54 @@ section {
   -webkit-text-fill-color: transparent;
   z-index: 0;
   line-height: 0.73;
-  text-align: left!important;
+  text-align: left !important;
 }
 
 @media (max-width: 550px) {
   .heading-largest {
     text-align: center;
-    font-size: 8rem;
+    font-size: 6.5rem;
   }
   .ramos-container {
-    min-height: unset!important;
+    min-height: unset !important;
+  }
+  .page-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .features-section {
+    background-size: 50% 25%;
+    background-image: repeating-linear-gradient(
+        0deg,
+        #cccccc6c,
+        #cccccc6c 1px,
+        transparent 1px,
+        transparent 15%
+      ),
+      repeating-linear-gradient(
+        -90deg,
+        #cccccc6c,
+        #cccccc6c 1px,
+        transparent 1px,
+        transparent 20%
+      );
+  }
+  .benefits-card .grid-lines {
+    z-index: 1;
+    background-size: 50% 50%;
+    background-image: repeating-linear-gradient(
+        0deg,
+        #cccccc6c,
+        #cccccc6c 1px,
+        transparent 1px,
+        transparent 15%
+      ),
+      repeating-linear-gradient(
+        -90deg,
+        #cccccc6c,
+        #cccccc6c 1px,
+        transparent 1px,
+        transparent 15%
+      );
   }
 }

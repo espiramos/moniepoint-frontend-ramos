@@ -88,7 +88,7 @@ export const AnimatedText = ({
                     {char}
                   </motion.span>
                 ))}
-                <span className="inline-block">&nbsp;</span>
+                {!noSpace && <span className="inline-block">&nbsp;</span>}
               </span>
             ))}
           </span>

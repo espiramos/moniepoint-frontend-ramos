@@ -198,7 +198,7 @@ function Hero() {
 
   return (
     <section
-      className={`${urbanist.className}  w-full page-padding min-h-screen flex flex-col justify-center items-center`}
+      className={`${urbanist.className} overflow-hidden w-full page-padding min-h-screen flex flex-col justify-center items-center`}
     >
       <div className="hidden md:flex hero-content md:pl-20 py-44 md:pr-12 flex-col w-full flex-nowrap">
         <div className="flex flex-col md:flex-row md:flex-nowrap md:justify-end w-full">
@@ -339,7 +339,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="flex-row w-full flex-wrap md:flex-nowrap flex items-center md:mt-9 md:justify-end">
+        <div className="flex-row w-full flex-nowrap flex items-center mt-9 justify-end">
           <AnimatedText
             once
             text="shape"
@@ -352,7 +352,7 @@ function Hero() {
             variants={fourthIconAnimation}
             initial="hidden"
             animate={fourthIconControls}
-            className="mx-4 shadow-md circle-icon will-change w-fit hidden md:block p-4 md:p-10 rounded-full flex flex-row justify-center items-center text-dark bg-positive"
+            className="mx-4 shadow-md circle-icon will-change p-10 rounded-full flex flex-row justify-center items-center text-dark bg-positive"
           >
             <div className="w-6 h-6 md:w-12 md:h-12 flex flex-center flex-row gap-x-1.5">
               <div className="h-full flex flex-col justify-end">
@@ -383,56 +383,56 @@ function Hero() {
           />
         </div>
       </div>
-      <div className="md:hidden hero-content flex flex-col w-full flex-nowrap">
+      <div className="md:hidden hero-content py-24 flex flex-col w-full flex-nowrap">
         <div className="flex flex-col w-full">
-          <div className="flex flex-row justify-center gap-y-4 items-center flex-wrap w-full">
+          <div className="flex flex-row justify-center gap-y-1 items-center flex-wrap w-full">
             <AnimatedText
               once
               text="Analytics"
               el="h1"
-              className="text-nowrap  w-full text-dark will-change text-center  text-7xl font-medium relative relative overflow-hidden w-fit h-fit"
+              className="text-nowrap  w-full text-dark will-change text-center text-6xl font-semibold relative relative overflow-hidden w-fit h-fit"
             />
             <AnimatedText
               once
               text="that"
               el="h1"
               delay={0.3}
-              className="text-nowrap text-dark will-change text-center  text-7xl font-medium relative relative overflow-hidden w-fit h-fit"
+              className="text-nowrap text-dark will-change text-center text-6xl font-semibold relative relative overflow-hidden w-fit h-fit"
             />
             <AnimatedText
               once
               text="helps"
               el="h1"
               delay={0.6}
-              className="text-nowrap text-grayalt will-change text-center  text-7xl font-medium relative relative overflow-hidden w-fit h-fit"
+              className="text-nowrap text-grayalt will-change text-center text-6xl font-semibold relative relative overflow-hidden w-fit h-fit"
             />
             <AnimatedText
               once
               text="you"
               el="h1"
               delay={0.9}
-              className="text-nowrap text-dark will-change text-center  text-7xl font-medium relative relative overflow-hidden w-fit h-fit"
+              className="text-nowrap text-dark will-change text-center text-6xl font-semibold relative relative overflow-hidden w-fit h-fit"
             />
             <AnimatedText
               once
               text="shape"
               el="h1"
               delay={1.2}
-              className="text-nowrap text-dark will-change text-center  text-7xl font-medium relative relative overflow-hidden w-fit h-fit"
+              className="text-nowrap text-dark will-change text-center text-6xl font-semibold relative relative overflow-hidden w-fit h-fit"
             />
             <AnimatedText
               once
               text="the"
               el="h1"
               delay={1.5}
-              className="text-nowrap text-dark will-change text-center  text-7xl font-medium relative relative overflow-hidden w-fit h-fit"
+              className="text-nowrap text-dark will-change text-center text-6xl font-semibold relative relative overflow-hidden w-fit h-fit"
             />
             <AnimatedText
               once
               text="future"
               el="h1"
               delay={1.8}
-              className="text-nowrap text-dark will-change text-center  text-7xl font-medium relative relative overflow-hidden w-fit h-fit"
+              className="text-nowrap text-dark will-change text-center text-6xl font-semibold relative relative overflow-hidden w-fit h-fit"
             />
           </div>
           <div className="w-full pl-3 mt-12">

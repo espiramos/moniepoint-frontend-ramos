@@ -94,7 +94,7 @@ function Footer() {
     <footer
       className={`${urbanist.className} getstarted-section w-full bg-dark pt-28 min-h-screen flex flex-col`}
     >
-      <div className="getstarted-content px-12 page-container flex flex-col justify-center flex-nowrap w-full">
+      <div className="getstarted-content px-8 md:px-12 page-container flex flex-col justify-center flex-nowrap w-full">
         <motion.div
           ref={firstDivRef}
           animate={firstControl}
@@ -125,7 +125,7 @@ function Footer() {
                   },
                 },
               }}
-              className="footer-links flex-wrap w-full md:w-fit flex flex-row items-center gap-x-6"
+              className="footer-links flex-wrap w-full md:w-fit flex flex-row items-center gap-y-3 md:gap-y-0 gap-x-6"
             >
               {links.map((navLink, index) => (
                 <a
@@ -228,10 +228,10 @@ function Footer() {
             </motion.div>
           </div>
           <div className="flex w-full flex-col md:flex-row items-center md:justify-between mb-12 mt-24">
-            <div className="flex order-2 md:order-1 w-full md:w-fit flex-row flex-nowrap font-medium">
-              <div className="w-full flex flex-row flex-center">
+            <div className="flex order-3 md:order-1 justify-center md:justify-start w-full md:w-fit flex-row flex-nowrap font-medium">
+              <div className="w-fit flex flex-row flex-center">
                 <h1
-                  className={`h-fit overflow-hidden text-white text-8xl md:text-9xl relative overflow-hidden w-fit h-fit`}
+                  className={`h-fit overflow-hidden text-white text-7xl md:text-9xl relative overflow-hidden w-fit h-fit`}
                 >
                   <span className="sr-only">ramos</span>
                   <motion.span
@@ -260,7 +260,6 @@ function Footer() {
                                 {char}
                               </motion.span>
                             ))}
-                            <span className="inline-block">&nbsp;</span>
                           </span>
                         ))}
                       </span>
@@ -281,12 +280,12 @@ function Footer() {
                     },
                   },
                 }}
-                className="text-5xl"
+                className="text-3xl md:text-5xl"
               >
                 Ⓡ
               </motion.span>
             </div>
-            <div className="flex order-3 md:order-2 flex-row w-full mb-8 md:mb-0 md:w-fit items-center justify-center gap-x-12">
+            <div className="flex order-2 md:order-2 flex-row w-full mb-8 md:mb-0 md:w-fit items-center justify-center gap-x-6 md:gap-x-12">
               <a
                 href="#"
                 className="text-graydeep transition ease-in-out duration-300 hover:text-white text-md mt-1"

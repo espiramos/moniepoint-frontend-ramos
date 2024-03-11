@@ -23,7 +23,7 @@ function Getstarted() {
   }, [isSectionDivInView, sectionControl]);
   return (
     <section
-      className={`${urbanist.className} getstarted-section w-full bg-white page-padding md:pb-12 min-h-screen flex flex-col`}
+      className={`${urbanist.className} getstarted-section  overflow-hidden w-full bg-white page-padding md:pb-12 min-h-screen flex flex-col`}
     >
       <motion.div
         ref={sectionDivRef}
@@ -66,21 +66,21 @@ function Getstarted() {
             />
           </div>
         </motion.div>
-        <div className="w-full flex flex-row flex-center">
+        <div className="w-full flex flex-wrap my-12 md:my-0 flex-row flex-center">
           <AnimatedText
             once
             text="Get"
             el="h1"
-            delay={1}
-            className="text-dark text-7xl md:text-9xl text-center font-medium md:mb-8 relative overflow-hidden w-fit h-fit"
+            delay={0.5}
+            className="text-dark text-nowrap text-7xl md:text-9xl text-center font-medium md:mb-8 relative overflow-hidden w-fit h-fit"
           />
           <AnimatedText
             once
             text="started"
             el="h1"
-            delay={1.5}
+            delay={1}
             noSpace={true}
-            className="text-dark text-7xl md:text-9xl text-center font-medium md:mb-8 relative overflow-hidden w-fit h-fit"
+            className="text-dark text-nowrap text-7xl md:text-9xl text-center font-medium md:mb-8 relative overflow-hidden w-fit h-fit"
           />
         </div>
         <motion.h6
@@ -94,7 +94,6 @@ function Getstarted() {
               y: 0,
               transition: {
                 duration: 1,
-                delay: 1,
               },
             },
           }}
@@ -115,11 +114,10 @@ function Getstarted() {
               y: 0,
               transition: {
                 duration: 1,
-                delay: 1,
               },
             },
           }}
-          className="md:hidden text-graydeep -mt-12 z-10 text-2xl text-center mb-12"
+          className="md:hidden text-graydeep z-10 text-2xl text-center mb-12"
         >
           Turn information into advantage! Start using
           Ramos today. Sign up for a free trial
@@ -134,7 +132,6 @@ function Getstarted() {
               transition: {
                 duration: 1,
                 type: "tween",
-                delay: 2,
               },
             },
           }}
@@ -142,13 +139,13 @@ function Getstarted() {
         >
           <button
             type="button"
-            className="text-dark bg-secondary w-1/2 md:w-fit transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-semibold rounded-xl text-md px-8 py-4 text-center"
+            className="text-dark bg-secondary w-1/2 md:w-fit transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-semibold rounded-xl text-md px-4 md:px-8 py-4 text-center"
           >
             Request a demo
           </button>
           <button
             type="button"
-            className="text-white bg-danger w-1/2 md:w-fit  transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-medium rounded-xl text-md px-8 py-4 text-center"
+            className="text-white bg-danger w-1/2 md:w-fit  transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-medium rounded-xl text-md px-4 md:px-8 py-4 text-center"
           >
             Start for free
           </button>

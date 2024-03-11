@@ -120,7 +120,7 @@ function Efficiency() {
   }, [textInView, textControls]);
   return (
     <section
-      className={`${urbanist.className} efficiency-section w-full bg-white page-padding py-28 min-h-screen flex flex-col`}
+      className={`${urbanist.className} efficiency-section  overflow-hidden w-full bg-white page-padding py-28 min-h-screen flex flex-col`}
     >
       <div className="efficiency-content py-28 md:px-12 flex flex-col flex-nowrap w-full">
         <div className="w-full flex flex-col">
@@ -216,7 +216,7 @@ function Efficiency() {
                   },
                 },
               }}
-              className="text-dark inner-shadow text-7xl md:text-9xl text-nowrap font-medium flex-nowrap w-fit"
+              className="text-dark text-nowrap inner-shadow h-fit text-7xl md:text-9xl text-nowrap font-medium flex-nowrap w-fit"
             >
               analytics services analytics services analytics services analytics
               services analytics services analytics services
@@ -282,7 +282,7 @@ function Efficiency() {
                   },
                 },
               }}
-              className="text-dark w-1/2 md:w-fit bg-secondary transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-medium rounded-xl text-sm px-8 py-3 text-center"
+              className="text-dark w-1/2 md:w-fit bg-secondary transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-medium rounded-xl text-sm px-4 md:px-8 py-3 text-center"
             >
               Request a demo
             </motion.button>
@@ -299,7 +299,7 @@ function Efficiency() {
                   },
                 },
               }}
-              className=" w-1/2 md:w-fit text-white bg-danger transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-medium rounded-xl text-sm px-8 py-3 text-center"
+              className=" w-1/2 md:w-fit text-white bg-danger transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg active:scale-95 active:shadow-xl active:shadow-inner font-medium rounded-xl text-sm px-4 md:px-8 py-3 text-center"
             >
               Start for free
             </motion.button>

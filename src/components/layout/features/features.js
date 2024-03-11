@@ -21,8 +21,8 @@ export default function Features() {
         featuresControl.start("visible");
         setTimeout(() => {
           setAnimationsDone(true)
-        }, 3000);
-      }, 2000);
+        }, 2000);
+      }, 500);
     
     } else {
       featuresControl.start("hidden");
@@ -37,7 +37,7 @@ export default function Features() {
       setTimeout(() => {
         devicesControl.start("visible");
         
-      }, 2000);
+      }, 1000);
       
     } else {
       devicesControl.start("hidden");
@@ -77,12 +77,12 @@ export default function Features() {
 
   return (
     <section
-      className={`${urbanist.className} overflow-hidden analytics-section relative features-section  min-h-screen`}
+      className={`${urbanist.className} overflow-hidden  overflow-hidden analytics-section relative features-section  min-h-screen`}
     >
       <div className="bg-grid-cover w-full h-3/5 absolute top-0"></div>
       <div className="page-padding-left pt-28  flex flex-col">
         <div
-          className="analytics-content md:pl-12 pr-6 md:pr-0 z-10 flex flex-col flex-nowrap w-full"
+          className="analytics-content md:pl-12 pr-4 md:pr-0 z-10 flex flex-col flex-nowrap w-full"
           style={{ overflowX: "clip" }}
         >
           <div className="w-full flex flex-col md:flex-row justify-between md:flex-nowrap">
@@ -177,7 +177,6 @@ export default function Features() {
                     y: 0,
                     transition: {
                       duration: 1,
-                      delay: 2,
                     },
                   },
                 }}
@@ -194,10 +193,9 @@ export default function Features() {
                     y: 400,
                   },
                   visible: {
-                    y: 0,
+                    y: "20%",
                     transition: {
                       duration: 1,
-                      delay: 2.5,
                     },
                   },
                 }}
