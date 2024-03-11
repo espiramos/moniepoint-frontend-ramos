@@ -147,7 +147,7 @@ function Efficiency() {
             className="text-dark md:mt-0 text-7xl md:text-9xl text-center md:text-left font-medium text-dark relative overflow-hidden w-fit h-fit"
           />
         </div>
-        <div className="flex flex-row mt-12 w-full items-center border-b-2 border-solid border-secondary pb-16 justify-between">
+        <div className="flex  flex-row mt-12 w-full items-center border-b-2 border-solid border-secondary pb-16 justify-between">
           <div className="hidden md:flex flex-row h-fit items-center">
             <motion.div
               ref={firstIconRef}
@@ -196,7 +196,7 @@ function Efficiency() {
             initial="hidden"
             animate={analyticsControls}
             aria-hidden
-            className="md:w-2/5 w-full flex-nowrap py-6 overflow-clip px-4 rounded-full bg-positive"
+            className="md:w-2/5 w-full flex-nowrap py-6 overflow-hidden md:px-4 rounded-full bg-positive"
           >
             <motion.div
               ref={analyticsTextRef}
@@ -216,7 +216,8 @@ function Efficiency() {
                   },
                 },
               }}
-              className="text-dark text-nowrap inner-shadow h-fit text-7xl md:text-9xl text-nowrap font-medium flex-nowrap w-fit"
+              style={{  whiteSpace: 'nowrap'}}
+              className="text-dark text-nowrap inner-shadow h-fit overflow-hidden text-7xl md:text-9xl text-nowrap font-medium flex-nowrap w-fit"
             >
               analytics services analytics services analytics services analytics
               services analytics services analytics services
